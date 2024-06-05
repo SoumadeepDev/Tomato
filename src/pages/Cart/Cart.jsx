@@ -24,9 +24,9 @@ const Cart = () => {
                 <div className="cart-items-title cart-items-item">
                   <img src={item.food_image} alt="" />
                   <p>{item.food_name}</p>
-                  <p>${item.food_price}</p>
+                  <p>Rs.{item.food_price}</p>
                   <div>{cartItems[item.food_id]}</div>
-                  <p>${item.food_price * cartItems[item.food_id]}</p>
+                  <p>Rs.{item.food_price * cartItems[item.food_id]}</p>
                   <p
                     className="cart-items-remove-icon"
                     onClick={() => removeFromCart(item.food_id)}
@@ -46,7 +46,7 @@ const Cart = () => {
           <div>
             <div className="cart-total-details">
               <p>Subtotal</p>
-              <p>${getTotalCartAmount()}</p>
+              <p>Rs.{getTotalCartAmount()}</p>
             </div>
             <hr />
             <div className="cart-total-details">
